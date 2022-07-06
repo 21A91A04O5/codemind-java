@@ -1,14 +1,13 @@
 import java.util.Scanner;
-class Area_Circle
+class Sample
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         int r;
-        float area;
-        final double pi=3.14;
+        double area;
         r=sc.nextInt();
-        area=(float)pi*r*r;
+        area=3.14*r*r;
         System.out.format("%.2f",area);
     }
 }
