@@ -1,34 +1,32 @@
 import java.util.Scanner;
 class Sample
 {
-    public static boolean palindrome(int n)
+    public static int reverse(int num)
     {
-        int temp=n;
         int r,rev=0;
-        while(n>0)
+        while(num>0)
         {
-            r=n%10;
+            r=num%10;
             rev=rev*10+r;
-            n=n/10;
+            num=num/10;
         }
-        if(temp==rev)
-          return true;
-        else
-          return false;
+        return rev;
     }
-    public static void main(String args[])
+    public static void main(String pavs[])
     {
-        int a,i,x[],count=0;
         Scanner sc=new Scanner(System.in);
-        a=sc.nextInt();
-        x=new int[a];
-        for( i=0;i<a;i++)
-           x[i]=sc.nextInt();
-        for(i=0;i<a;i++)   
+        int n,i,a[],c=0;
+        n=sc.nextInt();
+        a=new int[n];
+        for(i=0;i<n;i++)
         {
-            if(Sample.palindrome(x[i]))
-               count++;
+            a[i]=sc.nextInt();
         }
-        System.out.print(count);
+        for(i=0;i<n;i++)
+        {
+             if(a[i]==Sample.reverse(a[i]))
+                  c++;
+        }
+        System.out.println(c);
     }
 }
