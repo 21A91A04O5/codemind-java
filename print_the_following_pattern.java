@@ -6,12 +6,15 @@ class Sample
         int n,i,j;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
-        for(i=n;i>=1;i--)
+        for(i=1;i<=n;i++)
         {
             for(j=1;j<=i;j++)
             {
-                System.out.print((char)(64+i)+" ");
-            }
+                if(j==1||i==n||i==j)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }   
             System.out.println();
         }
     }
